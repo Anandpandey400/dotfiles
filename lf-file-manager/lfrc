@@ -1,0 +1,46 @@
+# Basic Settings
+set icons true
+set filesep " " 
+set drawbox true
+map . set hidden!
+
+
+#MAPPING
+map <enter> shell
+map <delete> delete
+map I $less %f%
+map p paste
+map x cut
+map c copy
+map <c-d> half-down
+map R reload
+map r push :rename<space>
+map s push &start.<enter>
+
+#making diirectory
+map + push :mkdir<space>
+cmd mkdir $mkdir $*
+
+map b push :bat<space>
+cmd bat $bat 
+
+map S push :spotdl<space>
+cmd spotdl $spotdl
+
+map t push :touch<space>
+cmd touch $touch
+map J push :filter<enter>
+
+map H cd "C:\Users\Anand Pandey\OneDrive\Desktop\Home" 
+map D cd ~/downloads
+map Y %echo %fx% | clip
+map F cd "C:\Users\Anand Pandey\AppData\Local\lf" 
+map M cd "C:\Users\Anand Pandey\OneDrive\Desktop\Home\Music"
+map G cd "G:\My Drive" 
+
+map V $vim %f%
+map v $code %f%
+
+#zip
+map Z $ 7z a -tzip %f%.zip %fx%
+map E $ 7z e %f% -o%f%-
